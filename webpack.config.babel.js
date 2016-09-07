@@ -1,14 +1,11 @@
 import webpack from 'webpack'
 
 export default {
-  context: __dirname + '/src',
-  entry: {
-    javascript: './app.js',
-    html: './index.html'
-  },
+  entry: './src/index.js',
   output: {
-    path: __dirname + '/dist',
-    filename: 'bundle.js'
+    path: './dist/',
+    filename: 'bundle.js',
+    publicPath: '/dist/'
   },
   resolve: {
     extensions: ['', '.js']
@@ -22,10 +19,6 @@ export default {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel'
-      },
-      {
-        test: /\.html$/,
-        loader: 'file?name=[name].[ext]'
       }
     ]
   }
