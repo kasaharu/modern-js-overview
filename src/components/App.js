@@ -1,8 +1,9 @@
 import React from 'react'
+import VisibleTodoList from '../containers/VisibleTodoList'
 
 const App = () => (
   <div>
-    Hello, React and Redux !
+    <VisibleTodoList />
   </div>
 )
 
