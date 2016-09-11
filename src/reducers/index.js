@@ -10,4 +10,16 @@ const todo = (state, action) => {
   }
 }
 
-export default todo
+const todos = (state = [], action) => {
+  switch (action.type) {
+    case 'ADD TODO':
+      return [
+        ...state,
+        todo(undefined, action)
+      ]
+    default:
+      return state
+  }
+}
+
+export default todos
